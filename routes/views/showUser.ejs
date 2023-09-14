@@ -1,0 +1,22 @@
+<body>
+  <%'./login.ejs'%>
+  <form method="POST" action="/profile/<%=user._id%>">
+    <input
+      type="text"
+      placeholder="Enter your name"
+      value="<%=user.name%>"
+      name="userName"
+    />
+    <input
+      type="number"
+      placeholder="Enter your Age"
+      value="<%=user.age%>"
+      name="age"
+    />
+    <p>
+      <a href="/delete/<%=user._id%>">Delete</a>
+    </p>
+
+    <button type="submit">update</button>
+  </form>
+</body>
